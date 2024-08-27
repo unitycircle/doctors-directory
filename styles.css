@@ -5,6 +5,9 @@ body {
   margin: 0;
   padding: 0;
 }
+.main-image{
+  float: right;
+}
 /* Page styles */
 .page {
   display: none; /* Hide all pages by default */
