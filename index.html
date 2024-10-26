@@ -50,12 +50,31 @@
     </div></div>
 
     <div id="doctors" class="page">
+
+        <div class = "header">
      
-        <strong><h1>BEST DOCTORS</h1></strong>
-        <div class="bookmark">
-            <li><a href="#B1">Private Doctors</a></li>
-            <li><a href="#B2">Government Doctors</a></li>
-            </div>
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Search doctor by name">
+                <select id="specializationFilter">
+                    <option value="">Specialization</option>
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="General Physician">General Physician</option>
+                    <!-- Add other specializations -->
+                </select>
+
+                <select id="categoryFilter">
+                    <option value="">Category</option>
+                    <option value="Private">Private</option>
+                    <option value="Government">Government</option>
+                </select>
+                <button onclick="filterDoctors()">Search</button></div>
+        </div>
+            <strong><h1>BEST DOCTORS</h1></strong>
+            <div class="bookmark">
+                <li><a href="#B1">Private Doctors</a></li>
+                <li><a href="#B2">Government Doctors</a></li>
+                </div>
+        <div id = "search-doc"></div>
 
         <h2 id = "B1">Private Doctors</h2>
       
@@ -67,7 +86,7 @@
                     <br>Location: Khyber Hospital, Khanyar
                     <br>Contact: 9906621130
                     <br><a href="#" class="profile-link" onclick="openProfile('Anwar Khan')">View Full Profile</a>
-                </div>
+                </div>    
             </li>
             <li>
                 <div class="doctor-info">

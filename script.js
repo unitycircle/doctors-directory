@@ -3,8 +3,8 @@ function showPage(pageId) {
     document.getElementById(pageId).classList.add('active');
 }
 
-function openProfile(profileId) {
-    const profiles = {
+
+     const profiles = {
         'Anwar Khan': {
             name: 'Dr. Anwar Khan',
             specialization: 'General Physician',
@@ -1969,6 +1969,7 @@ function openProfile(profileId) {
 
 
     };
+function openProfile(profileId) {
 
     const profile = profiles[profileId];
     if (profile) {
@@ -2001,8 +2002,78 @@ function openProfile(profileId) {
     };
 
 };
-
+    
 function closeModal() {
     document.getElementById('doctorModal').style.display = 'none';
     document.getElementById('doctorModalGovt').style.display = 'none';
+}
+
+function filterDoctors() {  
+    var nameInput = document.getElementById('searchInput').value.toLowerCase();  
+    var specializationInput = document.getElementById('specializationFilter').value; 
+    var categoryInput = document.getElementById('categoryFilter').value;
+
+
+    let govt_doc = Object.values(govt_profiles)
+    let pri_doc = Object.values(profiles)
+    // let filteredDoctors = [...Object.values(profiles), ...Object.values(govt_profiles)]; // Convert object to array  
+    let filteredDoctors = [...pri_doc, ...govt_doc]; 
+    // Filter by name  
+    if (nameInput) {  
+        filteredDoctors = filteredDoctors.filter(doctor =>   
+            doctor.name.toLowerCase().includes(nameInput)  
+        );  
+    }  
+
+    if (specializationInput && categoryInput)
+        if (categoryInput === "Private"){
+            filteredDoctors = pri_doc.filter(doctor =>  
+                doctor.specialization === specializationInput  
+            ); 
+        } else if (categoryInput === "Government") {
+            filteredDoctors = govt_doc.filter(doctor =>  
+                doctor.specialization === specializationInput 
+            );
+        }
+
+    // Filter by specialization  
+    if (specializationInput) {  
+        filteredDoctors = filteredDoctors.filter(doctor =>  
+            doctor.specialization === specializationInput  
+        );  
+    } 
+
+    if (filteredDoctors.length === 0) {  
+        alert("No such doctor found.");  
+        return; // Exit the function if no doctor is found  
+    }  
+
+
+    // Display results  
+    displayResults(filteredDoctors);  
+}  
+
+function displayResults(doctors) {  
+    const resultsDiv = document.getElementById('search-doc');  
+    resultsDiv.innerHTML = ''; // Clear previous results  
+
+    if (doctors.length === 0) {  
+        resultsDiv.innerHTML = '<p>No doctors match your search criteria.</p>';  
+        return;  
+    }  
+
+    doctors.forEach(doctor => {  
+        const doctorInfo = document.createElement('div');  
+        doctorInfo.innerHTML = `  
+            <strong>${doctor.name}</strong><br>  
+            Specialization: ${doctor.specialization}<br>  
+            Qualification: ${doctor.qualification}<br>  
+            Phone: ${doctor.phone}<br>  
+            Fee: ${doctor.fee}<br>  
+            Availability: ${doctor.availability}<br>  
+            Location: <a href="${doctor.locationLink}" target="_blank">${doctor.location}</a><br>  
+            <hr>  
+        `;  
+        resultsDiv.appendChild(doctorInfo);  
+    });  
 }
