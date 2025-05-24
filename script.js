@@ -145,7 +145,7 @@ function showPage(pageId) {
 
         'Riyaz Ah Bhat ': {
             name: 'Dr. Riyaz Ah Bhat ',
-            specialization: 'General Physician, Diabetoloogist, Endocrineologist',
+            specialization: 'General Physician',
             qualification: 'MBBS, MD(Medicine)',
             location: ' Raina Medicare, Jawahar Nagar',
             phone: '7039970399',
@@ -198,7 +198,7 @@ function showPage(pageId) {
 
         'Saleem Yousuf': {
             name: 'Dr. Saleem Yousuf',
-            specialization: 'General Physician, Psychiatrist',
+            specialization: 'Psychiatrist',
             qualification: 'MBBS',
             location: ' Near, Alamdar road, chadoora ',
             phone: '1141193906',
@@ -210,7 +210,7 @@ function showPage(pageId) {
 
         'Shabir Ahmad Dar': {
             name: 'Dr.  Shabir Ahmad Dar',
-            specialization: 'Sexologist,Psychiatrist',
+            specialization: 'Psychiatrist',
             qualification: 'MBBS, M.D. (Psychiatry)',
             location: 'Sharif Medical Hall Alamgari Bazar ',
             phone: '1140844823',
@@ -329,7 +329,7 @@ function showPage(pageId) {
 
         'Tariq Mir': {
             name: 'Dr.Tariq Mir',
-            specialization: 'General surgeon Urologist',
+            specialization: 'Urologist',
             qualification: 'MS - General Surgery from Sikkim University in 2017 and MBBS from U.Kashmir in 2013',
             location: ' Tahira Khanam, Srinagar',
             phone: '9906804797',
@@ -367,7 +367,7 @@ function showPage(pageId) {
 
         'Sulaiman Sath shawal': {
             name: 'Dr. Sulaiman Sath shawal',
-            specialization: 'Consultant Spine surgery and orthopaedics',
+            specialization: 'Orthopedic',
             qualification: ' MBBS MS (GMC, Srinagar ) DNB Orthopaedics, FNB Spine ',
             location: 'Medicare kaksari-Doog Ganga Road Maidanpora Karan Nagar Srinagar',
             phone: '6006612083',
@@ -393,7 +393,7 @@ function showPage(pageId) {
 
         'Aijaz Hamid Wani': {
             name: 'Dr. Aijaz Hamid Wani',
-            specialization: 'Orthopedic Surgeon',
+            specialization: 'Orthopedic',
             qualification: ' MBBS, FCPS',
             location: ' Cosmos bone and joint healthcare Rajbagh, Srinagar',
             phone: '8082224123',
@@ -483,7 +483,7 @@ function showPage(pageId) {
 
         'Muhammad Haseeb Gani': {
             name: 'Dr. Muhammad Haseeb Gani',
-            specialization: 'Orthipedic Surgeon',
+            specialization: 'Orthipedic',
             qualification: ' MRCS (The Royal College of Surgeons of Edinburg)-2018',
             location: 'Paras Hospital, Sgr  ',
             phone: '6006684736',
@@ -508,7 +508,7 @@ function showPage(pageId) {
 
 
         'Junaid Nabi': {
-            name: 'Dr.  Junaid Nabi',
+            name: 'Dr. Junaid Nabi',
             specialization: 'Psychiatrist',
             qualification: 'MD, MBBS (Psychiarist)',
             location: 'Shifa Medical Centre, karan nagar Srinagar  ',
@@ -520,7 +520,7 @@ function showPage(pageId) {
 
 
         'Peerzada Owais  ': {
-            name: 'Dr.   Peerzada Owais ',
+            name: 'Dr. Peerzada Owais ',
             specialization: 'Diabetologist',
             qualification: 'MBBS, Phd - Endocrinology and Biomedical Science',
             location: 'Shifa Medicare Lal Bazar, Srinagar ',
@@ -534,7 +534,7 @@ function showPage(pageId) {
 
         'Yasir Rather ': {
 
-            name: 'Dr.  Yasir Rather ',
+            name: 'Dr. Yasir Rather ',
             specialization: 'Psychiatrist',
             qualification: 'MBBS Medical degree with an MD in Mental Health',
             location: 'Khyber Medical Institute, Sgr',
@@ -548,7 +548,7 @@ function showPage(pageId) {
 
         'Asif Khan': {
 
-            name: 'Dr.   Asif Khan ',
+            name: 'Dr. Asif Khan ',
             specialization: 'Pediatrician',
             qualification: 'MD - Paediatrics , Sher-I-Kashmir Instt. Of Medical Sciences, Srinagar , 2017',
             location: 'G.B Pant Hospital, Barzulla',
@@ -560,8 +560,8 @@ function showPage(pageId) {
 
         'Imran Majid': {
 
-            name: 'Dr.   Imran Majid',
-            specialization: 'Cosmetic surgery, Laser treatments',
+            name: 'Dr. Imran Majid',
+            specialization: 'Dermatologist',
             qualification: 'MBBS (Dermatology)',
             location: 'Cutis Institute of Dermatology, Hyderpora Bypass Srinagar ',
             phone: '9622594238',
@@ -572,7 +572,7 @@ function showPage(pageId) {
 
         'Imtiyaz Mir': {
 
-            name: 'Dr.  Imtiyaz Mir',
+            name: 'Dr. Imtiyaz Mir',
             specialization: 'Dermatologist',
             qualification: 'MBBS, BSC, FRCP',
             location: 'Skin Institute, Bemina',
@@ -582,14 +582,9 @@ function showPage(pageId) {
             locationLink: 'https://maps.app.goo.gl/t419Enz2xanfc9k57'
         },
 
-
-
-
-
-
         'Zainab Qureshi': {
 
-            name: 'Dr.  Zainab Qureshi',
+            name: 'Dr. Zainab Qureshi',
             specialization: 'Gynecologist',
             qualification: 'MD, MBBS (Gynecologist)',
             location: 'Lal Ded Hospital, Karan Nagar',
@@ -604,7 +599,7 @@ function showPage(pageId) {
 
         'Shah Naveed ': {
 
-            name: 'Dr.   Shah Naveed',
+            name: 'Dr. Shah Naveed',
             specialization: 'Cancer Specialist',
             qualification: 'MBBS, MD, FCCP',
             location: 'Paras Hospital Dalgate Srinagar',
@@ -646,7 +641,7 @@ function showPage(pageId) {
         'Altaf wani': {
 
             name: 'Dr. Altaf wani',
-            specialization: 'Orthopedic Surgeon',
+            specialization: 'Orthopedic',
             qualification: 'MBBS, GMC Srinagar 1985, MS GMC Srinagar',
             location: 'Gut Care Clinic, Khanyar',
             phone: '9086000024',
@@ -686,7 +681,7 @@ function showPage(pageId) {
         'Syed Arif Kashani': {
 
             name: 'Dr. Syed Arif Kashani',
-            specialization: 'Cardiology and Cardiac Citical Care',
+            specialization: 'Cardiologist',
             qualification: 'MBBS, PG Dip Medicine, Dip Cardiology',
             location: 'Safa Marwah Hospital, Soura',
             phone: '7039970399',
@@ -700,7 +695,7 @@ function showPage(pageId) {
         'Tariq Rashid': {
 
             name: 'Dr. Tariq Rashid',
-            specialization: 'Interventional Cardiologist',
+            specialization: 'Cardiologist',
             qualification: 'MD DM(SKIMS) GOLD MEDALIST',
             location: 'Shifa Medical Center, Magarmal Bagh Rd, Shergarhi, Srinagar',
             phone: '7051022389',
@@ -714,7 +709,7 @@ function showPage(pageId) {
         'Manzoor Ah Halwai': {
 
             name: 'Dr. Manzoor Ah Halwai',
-            specialization: 'Orthopedic Surgeon',
+            specialization: 'Orthopedic',
             qualification: 'MBBS Govt. Medical College, University of kashmir 1981',
             location: 'Manzoor Halwai Bone care clinic Iqbal park Srinagar ',
             phone: '7039970399',
@@ -784,7 +779,7 @@ function showPage(pageId) {
 
             name: 'Dr.Khurshid Ahmad Banday',
             specialization: 'Kidney transplantation, kidney failure, dialysis, nephrotic ',
-            qualification: 'MBBS, MD, DM (Nephrology',
+            qualification: 'MBBS, MD, DM (Nephrology)',
             location: 'Opposite Amar Singh Club, Banumsar, Sonwar Bagh, Srinagar',
             phone: '1942501708',
             fee: '₹500',
@@ -795,7 +790,7 @@ function showPage(pageId) {
         'Maria Farooq': {
 
             name: 'Dr.Maria Farooq',
-            specialization: 'Gynecologist, Obsterician',
+            specialization: 'Gynecologist',
             qualification: 'MBBS, MD - Obstetrics & Gynaecology',
             location: 'Bachpora, Srinagar',
             phone: '1141168499',
@@ -927,7 +922,7 @@ function showPage(pageId) {
         'Mir Basharat Ahmad Kanth': {
 
             name: 'Dr. Mir Basharat Ahmad Kanth',
-            specialization: 'Associate Director, Neurology',
+            specialization: 'Neurologist',
             qualification: 'MBBS (GMC , Srinagar)-2003, MS General Surgery (SKIMS, Srinagar)-2008,Mch , Neurosurgery(SKIMS,Srinagar)-2023 ',
             location: 'Paras hospital srinagar',
             phone: '8035358717',
@@ -940,7 +935,7 @@ function showPage(pageId) {
         'Altaf Ramzan': {
 
             name: 'Dr. Altaf Ramzan',
-            specialization: 'Director-Neurosurgery',
+            specialization: 'Neurologist',
             qualification: 'MBBS , MS ,MCH. ',
             location: 'Paras hospital srinagar',
             phone: '8035358717',
@@ -1081,7 +1076,7 @@ function showPage(pageId) {
         'Ashim': {
 
             name: 'Dr.Ashim',
-            specialization: 'Dental Surgeon,Implantologist',
+            specialization: 'Dentist',
             qualification: 'BDS',
             location: 'Asa Dental Jawahar  Nagar ',
             phone: '1142213882',
@@ -1092,7 +1087,7 @@ function showPage(pageId) {
 
         'Mudassir Hassan Pandith': {
 
-            name: ' Mudassir Hassan Pandith',
+            name: 'Dr. Mudassir Hassan Pandith',
             specialization: 'Psychologist',
             qualification: 'M phil Clinical Psychology ',
             location: 'Prevalent pharmacy Dargah Srinagar  ',
@@ -1104,8 +1099,8 @@ function showPage(pageId) {
 
         'Tanveer Iqbal': {
 
-            name: ' Tanveer Iqbal',
-            specialization: 'Urological surgeon',
+            name: 'Dr.Tanveer Iqbal',
+            specialization: 'Urologist',
             qualification: 'DNB-Urology/Genito- urinary Surgery , MBBS, MS- General surgery ',
             location: 'Mehboob Medicate S bala Srinagar ',
             phone: '1161262033',
@@ -1116,7 +1111,7 @@ function showPage(pageId) {
 
         'Masroor Shah': {
 
-            name: 'Masroor Shah',
+            name: 'Dr. Masroor Shah',
             specialization: 'Dentist',
             qualification: 'BDS ',
             location: 'Khyber Medical Institute Khayam Chowk, Nowpora  ',
@@ -1128,8 +1123,8 @@ function showPage(pageId) {
 
         'Jibran Bashir': {
 
-            name: 'Jibran Bashir',
-            specialization: 'Orthopedic Surgeon',
+            name: 'Dr. Jibran Bashir',
+            specialization: 'Orthopedic',
             qualification: 'MBBS, Diploma in Orthopaedics, DNB - Orthopedics ',
             location: 'Dr Zargars Multispeciality Clinic Parimpora, Srinagar ',
             phone: '8491049816',
@@ -1141,8 +1136,8 @@ function showPage(pageId) {
 
         'Zameer Ali': {
 
-            name: 'Zameer Ali',
-            specialization: 'Orthopedic Surgeon',
+            name: 'Dr. Zameer Ali',
+            specialization: 'Orthopedic',
             qualification: 'DNB - Orthopedics ',
             location: 'RMC Clinic Bemina, Srinagar  ',
             phone: '1161264859',
@@ -1154,7 +1149,7 @@ function showPage(pageId) {
 
         'Muzafar Zargar': {
 
-            name: 'Muzafar Zargar',
+            name: 'Dr. Muzafar Zargar',
             specialization: 'Diabetes, thyroid disorders, and obesity management',
             qualification: 'MBBS, MD ',
             location: 'Safa Marwah Hospital, 90 Feet Road, Upper Soura  ',
@@ -1167,7 +1162,7 @@ function showPage(pageId) {
 
         'Junaid Banday': {
 
-            name: 'Junaid Banday',
+            name: 'Dr. Junaid Banday',
             specialization: 'Dentist',
             qualification: 'BDS ',
             location: 'Smile kashmir Dental care near Habak Naseem Bagh ',
@@ -1179,7 +1174,7 @@ function showPage(pageId) {
 
         'Arbina Jeelani': {
 
-            name: 'Arbina Jeelani',
+            name: 'Dr. Arbina Jeelani',
             specialization: 'Dentist',
             qualification: 'BDS ',
             location: 'ASA Dental Jawahar Nagar, Srinagar ',
@@ -1191,8 +1186,8 @@ function showPage(pageId) {
 
         'Bashir Ahmed Lone': {
 
-            name: 'Bashir Ahmed Lone',
-            specialization: 'Urological Surgeon',
+            name: 'Dr. Bashir Ahmed Lone',
+            specialization: 'Urologist',
             qualification: 'MS - General Surgery, DNB - Urology/Genito - Urinary Surgery, MBBS ',
             location: 'Friends Hospital Bemina, Srinagar Tangpora Bypass Srinagar',
             phone: '9980748578',
@@ -1203,7 +1198,7 @@ function showPage(pageId) {
 
         'S. Aamir': {
 
-            name: 'S. Aamir',
+            name: 'Dr. S. Aamir',
             specialization: 'Ophthalmologist',
             qualification: 'MBBS, DNB - Ophthalmology ',
             location: 'Imam Hussain Hospital Bemina, Hamdania Colony., Srinagar',
@@ -1215,7 +1210,7 @@ function showPage(pageId) {
 
         'Araslan Tazeem': {
 
-            name: 'Araslan Tazeem',
+            name: 'Dr. Araslan Tazeem',
             specialization: 'General Practitioner',
             qualification: 'MBBS ',
             location: 'classic hospital hyderpora Hyderpora Nh Bypass Near Gulberg Colony, Srinagar',
@@ -1227,7 +1222,7 @@ function showPage(pageId) {
 
         'Abdul Reshi': {
 
-            name: 'Abdul Reshi',
+            name: 'Dr. Abdul Reshi',
             specialization: 'Comprehensive kidney care',
             qualification: 'MBBS, MD, DM (Nephrology)',
             location: 'Dr Reshis Kidney Care & Diagnostic Centre',
@@ -1239,8 +1234,8 @@ function showPage(pageId) {
 
         'Shazia Jeelani': {
 
-            name: 'Shazia Jeelani',
-            specialization: 'Dermatosis, Aesthetics, Laser Treatments',
+            name: 'Dr. Shazia Jeelani',
+            specialization: 'Dermatologist',
             qualification: 'MD DERMATOLOGY, FACSI DERMATOSIS, AESTHETICS AND',
             location: 'Mediworld Clinics Wazir Bagh, LD Hospital Road, Srinagar',
             phone: '6005160601',
@@ -1262,7 +1257,7 @@ function showPage(pageId) {
             },
             "Ahmad Khalid Andrabi": {
                 name: "Dr. Ahmad Khalid Andrabi",
-                specialization: "General Physician,Internal Medicine",
+                specialization: "General Physician",
                 qualification: "MBBS, MD - General Medicine",
                 location: "Jeelanaabad, Srinagar",
                 phone: "9469833976",
@@ -1272,7 +1267,7 @@ function showPage(pageId) {
             },
             "M Y Khan": {
                 name: "Dr. M Y Khan",
-                specialization: "Cardiothoracic and Vascular Surgeon ",
+                specialization: "Cardiologist",
                 qualification: "MBBS, MS - General Surgery",
                 location: "Chanapora Main Road, Landmark: Near J&K Bank, Srinagar",
                 phone: "1143078257",
@@ -1292,8 +1287,8 @@ function showPage(pageId) {
             },
             "Najeeb Ullah Sofi": {
                 name: "Dr. Najeeb Ullah Sofi",
-                specialization: "Interventional Cardiologist",
-                qualification: "DM - Cardiology, MD - General Medicine, MBBS",
+                specialization: "Cardiologist",
+                qualification: "MD - Cardiology, MD - General Medicine, MBBS",
                 location: "Kak Sarai, Shreen Bagh Road, Landmark: Opposite SMHS Emergency Gate, Srinagar",
                 phone: "8037296910",
                 fee: "500",
@@ -1312,7 +1307,7 @@ function showPage(pageId) {
             },
             "Sameer Ahmad Malik": {
                 name: "Dr. Sameer Ahmad Malik",
-                specialization: "Dentist, Orthodontist",
+                specialization: "Dentist",
                 qualification: "BDS, MDS - Conservative Dentistry & Endodontics",
                 location: "Kathidarwaza, Anzimar, Srinagar(Access Dental Care)",
                 phone: "1140849699",
@@ -1342,7 +1337,7 @@ function showPage(pageId) {
             },
             "Ajaz Ahmad Suhaff": {
                 name: "Dr. Ajaz Ahmad Suhaff",
-                specialization: "Neuropsychiatrist",
+                specialization: "Neurologist",
                 qualification: "MD - Physician, DNB - Psychiatry",
                 location: "M. K. Chowk, Hawal, Srinagar, Jammu and Kashmir, Srinagar (Souleh Medicate)",
                 phone: "01143-78817",
@@ -1362,7 +1357,7 @@ function showPage(pageId) {
             },
             "Omar Bachh": {
                 name: "Dr. Omar Bachh",
-                specialization: "Neurosurgeon",
+                specialization: "Neurologist",
                 qualification: "DrNB neurosurgery - direct 6 years course, MBBS Bachelor of Medicine and Bachelor of Surgery Srinagar",
                 location: "Ujala Cygnus Kashmir Super Speciality Hospital Pohru Chowk, Nowgam",
                 phone: "18008898984",
@@ -1392,7 +1387,7 @@ function showPage(pageId) {
             },
             "Dr.Nazeefa": {
                 name: "Dr.Nazeefa",
-                specialization: "Obstetrician and Gynaecologist",
+                specialization: "Gynecologist",
                 qualification: "MBBS, MD",
                 location: "Paras Hospital, Munshi Bagh Srinagar",
                 phone: "8080808069",
@@ -1402,7 +1397,7 @@ function showPage(pageId) {
             },
             "Insha Kak": {
                 name: "Dr. Insha Kak",
-                specialization: "Psychiatrist, ,Neuropsychiatrist",
+                specialization: "Psychiatrist",
                 qualification: "M.D. (Psychiatry)",
                 location: "Wanbal Rawalpora, Srinagar (Prime Medicate)",
                 phone: "1142213811",
@@ -1422,7 +1417,7 @@ function showPage(pageId) {
             },
             "Athiya Fahiem Khan": {
                 name: "Dr. Athiya Fahiem Khan",
-                specialization: "Neuropsychiatrist",
+                specialization: "Neurologist",
                 qualification: "Amandeep BR Medicity, Hospital Rahmat Nagar Tengpora, Byepass, Srinagar",
                 location: "60 Feet Road, Gousia Colony, Srinagar (Rx Pharmacy)",
                 phone: "1142213894",
