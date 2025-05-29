@@ -3227,42 +3227,81 @@ body {
         </div>
     </div>
     <script>
-        // Handle form submission
-        document.getElementById('reviewForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevents the page from reloading on submit
-    
-            // Get the selected rating and the review text
-            let rating = document.querySelector('input[name="rating"]:checked');
-            let reviewText = document.querySelector('textarea[name="review_text"]').value;
-    
-            // Check if rating is selected
-            if (!rating) {
-                alert("Please select a rating.");
-                return;
-            }
-    
-            // Check if review text is provided
-            if (!reviewText.trim()) {
-                alert("Please write your review.");
-                return;
-            }
-    
-            // Create the review HTML structure
-            const reviewItem = document.createElement('div');
-            reviewItem.classList.add('review-item');
-    
-            const stars = '★'.repeat(rating.value); // Create the stars based on the rating
-            reviewItem.innerHTML = `
-                <div class="stars">${stars}</div>
-                <p>${reviewText}</p>
-            `;
-    
-            // Append the review to the reviews list
-            document.getElementById('reviews-list').appendChild(reviewItem);
-    
-            // Clear the form after submission
-            document.getElementById('reviewForm').reset();
-        });
+      // Add this function to load reviews from localStorage and display them
+function loadReviews() {
+    const reviewsList = document.getElementById('reviews-list');
+    reviewsList.innerHTML = ''; // Clear previous content
+
+    // Get saved reviews or empty array if none
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+    // Loop through reviews and create elements to display
+    reviews.forEach(review => {
+        const reviewItem = document.createElement('div');
+        reviewItem.classList.add('review-item');
+
+        const stars = '★'.repeat(review.rating);
+
+        reviewItem.innerHTML = `
+            <div class="review-header">
+                <strong>${review.reviewerName}</strong> rated this:
+            </div>
+            <div class="stars">${stars}</div>
+            <p>${review.reviewText}</p>
+        `;
+        reviewsList.appendChild(reviewItem);
+    });
+}
+
+// Your existing form submit handler - modify it like this
+document.getElementById('reviewForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from reloading the page
+
+    // Get values from inputs
+    let reviewerName = document.querySelector('input[name="reviewer_name"]').value.trim();
+    let ratingInput = document.querySelector('input[name="rating"]:checked');
+    let reviewText = document.querySelector('textarea[name="review_text"]').value.trim();
+
+    // Validation
+    if (!ratingInput) {
+        alert("Please select a rating.");
+        return;
+    }
+    if (!reviewText) {
+        alert("Please write your review.");
+        return;
+    }
+    if (!reviewerName) {
+        alert("Please enter your name.");
+        return;
+    }
+
+    // Create review object
+    const newReview = {
+        reviewerName: reviewerName,
+        rating: ratingInput.value,
+        reviewText: reviewText
+    };
+
+    // Get existing reviews from localStorage
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+    // Add the new review
+    reviews.push(newReview);
+
+    // Save back to localStorage
+    localStorage.setItem('reviews', JSON.stringify(reviews));
+
+    // Refresh displayed reviews
+    loadReviews();
+
+    // Clear the form
+    this.reset();
+});
+
+// Call loadReviews once on page load to display saved reviews
+window.onload = loadReviews;
+
     </script>
     
     <div class="contact">
