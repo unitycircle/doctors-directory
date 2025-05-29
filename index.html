@@ -3229,12 +3229,13 @@ body {
     <script>
       // Add this function to load reviews from localStorage and display them
 function loadReviews() {
+      const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
     const reviewsList = document.getElementById('reviews-list');
     reviewsList.innerHTML = ''; // Clear previous content
 
     // Get saved reviews or empty array if none
-    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-
+  
     // Loop through reviews and create elements to display
     reviews.forEach(review => {
         const reviewItem = document.createElement('div');
