@@ -3140,168 +3140,105 @@ body {
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="1407fca0-3128-479d-9b96-47861d2e2fce";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     <div class="review-section">
         <h3>Write a Review</h3>
-    
-        <!-- Review Form -->
-        <form id="reviewForm">
-            <!-- Star Rating -->
-            <div class="star-rating">
-                <input type="radio" id="star5" name="rating" value="5" />
-                <label for="star5">☆</label>
-    
-                <input type="radio" id="star4" name="rating" value="4" />
-                <label for="star4">☆</label>
-    
-                <input type="radio" id="star3" name="rating" value="3" />
-                <label for="star3">☆</label>
-    
-                <input type="radio" id="star2" name="rating" value="2" />
-                <label for="star2">☆</label>
-    
-                <input type="radio" id="star1" name="rating" value="1" />
-                <label for="star1">☆</label>
-            </div>
-    <!-- Reviewer Name (or Username) -->
-<input type="text" name="reviewer_name" placeholder="Enter your name" required>
-<script>
-    document.getElementById('reviewForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevents page reload on submit
-    
-        // Get the reviewer's name, selected rating, and review text
-        let reviewerName = document.querySelector('input[name="reviewer_name"]').value;
-        let rating = document.querySelector('input[name="rating"]:checked');
-        let reviewText = document.querySelector('textarea[name="review_text"]').value;
-    
-        // Check if rating is selected
-        if (!rating) {
-            alert("Please select a rating.");
-            return;
-        }
-    
-        // Check if review text is provided
-        if (!reviewText.trim()) {
-            alert("Please write your review.");
-            return;
-        }
-    
-        // Check if reviewer name is provided
-        if (!reviewerName.trim()) {
-            alert("Please enter your name.");
-            return;
-        }
-    
-        // Create the review HTML structure
-        const reviewItem = document.createElement('div');
-        reviewItem.classList.add('review-item');
-    
-        // Create the stars based on the rating
-        const stars = '★'.repeat(rating.value);
-    
-        // Create the review item with the reviewer's name, stars, and review text
-        reviewItem.innerHTML = `
-            <div class="review-header">
-                <strong>${reviewerName}</strong> rated this:
-            </div>
-            <div class="stars">${stars}</div>
-            <p>${reviewText}</p>
-        `;
-    
-        // Append the review to the reviews list
-        document.getElementById('reviews-list').appendChild(reviewItem);
-    
-        // Clear the form after submission
-        document.getElementById('reviewForm').reset();
-    });
-    
-</script>
-            <!-- Review Text Area -->
-            <textarea name="review_text" placeholder="Write your review here..." required></textarea>
-    
-            <!-- Submit Button -->
-            <button type="submit">Submit Review</button>
-        </form>
-    
-        <!-- Reviews Display Section -->
-        <h4>Reviews:</h4>
-        <div id="reviews-list">
-            <!-- New reviews will be displayed here after submission -->
-        </div>
+
+<!-- Review Form -->
+<form id="reviewForm">
+    <!-- Star Rating -->
+    <div class="star-rating">
+        <input type="radio" id="star5" name="rating" value="5" />
+        <label for="star5">☆</label>
+
+        <input type="radio" id="star4" name="rating" value="4" />
+        <label for="star4">☆</label>
+
+        <input type="radio" id="star3" name="rating" value="3" />
+        <label for="star3">☆</label>
+
+        <input type="radio" id="star2" name="rating" value="2" />
+        <label for="star2">☆</label>
+
+        <input type="radio" id="star1" name="rating" value="1" />
+        <label for="star1">☆</label>
     </div>
-    <script>
-      // Add this function to load reviews from localStorage and display them
-function loadReviews() {
+
+    <!-- Reviewer Name -->
+    <input type="text" name="reviewer_name" placeholder="Enter your name" required>
+
+    <!-- Review Text Area -->
+    <textarea name="review_text" placeholder="Write your review here..." required></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit Review</button>
+</form>
+
+<!-- Reviews Display Section -->
+<h4>Reviews:</h4>
+<div id="reviews-list">
+    <!-- New reviews will be displayed here after submission -->
+</div>
+
+<script>
+  // Load reviews from localStorage
+  function loadReviews() {
       const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+      const reviewsList = document.getElementById('reviews-list');
+      reviewsList.innerHTML = ''; // Clear previous content
 
-    const reviewsList = document.getElementById('reviews-list');
-    reviewsList.innerHTML = ''; // Clear previous content
+      reviews.forEach(review => {
+          const reviewItem = document.createElement('div');
+          reviewItem.classList.add('review-item');
 
-    // Get saved reviews or empty array if none
-  
-    // Loop through reviews and create elements to display
-    reviews.forEach(review => {
-        const reviewItem = document.createElement('div');
-        reviewItem.classList.add('review-item');
+          const stars = '★'.repeat(review.rating);
 
-        const stars = '★'.repeat(review.rating);
+          reviewItem.innerHTML = `
+              <div class="review-header">
+                  <strong>${review.reviewerName}</strong> rated this:
+              </div>
+              <div class="stars">${stars}</div>
+              <p>${review.reviewText}</p>
+          `;
+          reviewsList.appendChild(reviewItem);
+      });
+  }
 
-        reviewItem.innerHTML = `
-            <div class="review-header">
-                <strong>${review.reviewerName}</strong> rated this:
-            </div>
-            <div class="stars">${stars}</div>
-            <p>${review.reviewText}</p>
-        `;
-        reviewsList.appendChild(reviewItem);
-    });
-}
+  // Handle form submission
+  document.getElementById('reviewForm').addEventListener('submit', function(event) {
+      event.preventDefault();
 
-// Your existing form submit handler - modify it like this
-document.getElementById('reviewForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from reloading the page
+      let reviewerName = document.querySelector('input[name="reviewer_name"]').value.trim();
+      let ratingInput = document.querySelector('input[name="rating"]:checked');
+      let reviewText = document.querySelector('textarea[name="review_text"]').value.trim();
 
-    // Get values from inputs
-    let reviewerName = document.querySelector('input[name="reviewer_name"]').value.trim();
-    let ratingInput = document.querySelector('input[name="rating"]:checked');
-    let reviewText = document.querySelector('textarea[name="review_text"]').value.trim();
+      if (!ratingInput) {
+          alert("Please select a rating.");
+          return;
+      }
+      if (!reviewText) {
+          alert("Please write your review.");
+          return;
+      }
+      if (!reviewerName) {
+          alert("Please enter your name.");
+          return;
+      }
 
-    // Validation
-    if (!ratingInput) {
-        alert("Please select a rating.");
-        return;
-    }
-    if (!reviewText) {
-        alert("Please write your review.");
-        return;
-    }
-    if (!reviewerName) {
-        alert("Please enter your name.");
-        return;
-    }
+      const newReview = {
+          reviewerName: reviewerName,
+          rating: ratingInput.value,
+          reviewText: reviewText
+      };
 
-    // Create review object
-    const newReview = {
-        reviewerName: reviewerName,
-        rating: ratingInput.value,
-        reviewText: reviewText
-    };
+      const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+      reviews.push(newReview);
+      localStorage.setItem('reviews', JSON.stringify(reviews));
 
-    // Get existing reviews from localStorage
-    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-    
-    // Add the new review
-    reviews.push(newReview);
+      this.reset();
+      loadReviews();
+  });
 
-    // Save back to localStorage
-    localStorage.setItem('reviews', JSON.stringify(reviews));
+  // Load reviews on page load
+  window.onload = loadReviews;
 
-    // Refresh displayed reviews
-    loadReviews();
-
-    // Clear the form
-    this.reset();
-});
-
-// Call loadReviews once on page load to display saved reviews
-window.onload = loadReviews;
 
     </script>
     
